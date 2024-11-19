@@ -13,7 +13,10 @@ app.use("/scores", scoresRoutes);
 dotenv.config();
 connect();
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 047114bf7064f4f1eeeccc98ec83a55435e2c99a
 const PORT = process.env.PORT || 4000;
 
 // Routes
