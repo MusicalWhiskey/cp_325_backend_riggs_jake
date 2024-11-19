@@ -12,4 +12,15 @@ router.get("/", async (req, res) => {
     }
 });
 
+router.post("/", async (req, res) => {
+    const score = req.body;
+    const newScore = new Scores(score);
+    try {
+        await newScore.save();
+        res.status(201).json(newScore);
+    } catch (error) {
+        res.status(409).json({ message: error.message });
+    }
+});
+
 export default router;
