@@ -23,4 +23,24 @@ router.post("/", async (req, res) => {
     }
 });
 
+router.delete("/", async (req, res) => {
+    try {
+        await Scores.deleteMany({});
+        res.status(200).json({ message: "Score deleted successfully" });
+    } catch (error) {
+        res.status(404).json({ message: error.message });
+    }
+});
+
+router.put("/", async (req, res) => {
+    const score = req.body;
+    try {
+        await Scores.updateMany({}, { $set: { score: score } });
+        res.status(200).json({ message: "Scores updated successfully" });
+    } catch (error) {
+        res.status(404).json({ message: error.message });
+    }
+});
+
+
 export default router;
