@@ -15,7 +15,7 @@ const schema = Joi.object({
   lastName: Joi.string().required(),
   birthday: Joi.string().required(),
   email: Joi.string().email().required(),
-  password: Joi.string().required(),
+  password: Joi.string().required()
 });
 
 router.post("/", async (req, res) => {
