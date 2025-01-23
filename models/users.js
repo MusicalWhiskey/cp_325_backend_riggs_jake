@@ -8,7 +8,7 @@ const usersSchema = mongoose.Schema({
     birthday: { type: String, required: true },
     email: { type: String, unique: true, required: true },
     password: { type: String, required: true },
-    score: { type: Number, default: 0 },
+    highScore: { type: Number, default: 0 },
     accountCreationDate: { type: Date, default: Date.now },
     lastLoginDate: { type: Date, default: Date.now }
   });
