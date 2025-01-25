@@ -11,3 +11,5 @@ export async function connect() {
         
     }
 }
+
+mongoose.set('debug', true);
