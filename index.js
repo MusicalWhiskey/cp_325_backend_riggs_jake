@@ -2,7 +2,6 @@ import cors from "cors";
 import dotenv from "dotenv";
 import express from "express";
 import usersRoutes from "./routes/users.js";
-import scoresRoutes from "./routes/scores.js";
 import registerRoutes from "./routes/register.js";
 import loginRoutes from "./routes/login.js";
 import { connect } from "./db/connect.js";
@@ -19,7 +18,6 @@ connect();
 const PORT = process.env.PORT || 4000;
 
 // Routes
-app.use('/api/scores', scoresRoutes);
 
 app.use('/api/users', usersRoutes);
 
