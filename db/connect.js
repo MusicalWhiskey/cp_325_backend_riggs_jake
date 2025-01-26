@@ -12,4 +12,4 @@ export async function connect() {
     }
 }
 
-mongoose.set('debug', true);
+mongoose.set('debug', false);
