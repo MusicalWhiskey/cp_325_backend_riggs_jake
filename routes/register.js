@@ -19,6 +19,7 @@ const schema = Joi.object({
 });
 
 router.post("/", async (req, res) => {
+  console.log(req.body); // Add this line
   try {
     const { username, firstName, lastName, birthday, email, password } = req.body;
     const user = new Users({ username, firstName, lastName, birthday, email, password });
