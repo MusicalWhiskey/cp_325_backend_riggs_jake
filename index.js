@@ -15,7 +15,7 @@ app.use(express.static('public'));
 dotenv.config();
 connect();
 
-const PORT = process.env.PORT || 6911;
+const PORT = process.env.PORT || 8080;
 
 // Routes
 
