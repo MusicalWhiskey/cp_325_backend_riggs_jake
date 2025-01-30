@@ -23,7 +23,7 @@ router.post("/", async (req, res) => {
         user.lastLoginDate = new Date();
         await user.save();
 
-        console.log("API response:", user.lastLoginDate);
+        console.log("API response:", user.username + " logged in at " + user.lastLoginDate);
         res.status(200).json(user);
     } catch (error) {
         res.status(500).json({ message: "Error logging in" });
