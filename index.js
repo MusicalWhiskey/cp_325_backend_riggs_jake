@@ -4,6 +4,7 @@ import express from "express";
 import usersRoutes from "./routes/users.js";
 import registerRoutes from "./routes/register.js";
 import loginRoutes from "./routes/login.js";
+import Scores from "./models/scores.js";
 import { connect } from "./db/connect.js";
 
 const app = express();
@@ -24,6 +25,8 @@ app.use('/api/users', usersRoutes);
 app.use('/api/register', registerRoutes);
 
 app.use('/api/login', loginRoutes);
+
+app.use('/api/scores', Scores);
 
 app.get('/api/register', async (req, res) => {
     res.send(`We Registering in this Bitch`);
